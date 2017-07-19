@@ -1,5 +1,19 @@
 
 $(function(){
+	
+	var span = $('span');
+	var ignored = ['#spanColor1', '#spanColor3', '#spanColor4'];
+
+	span.each(function(index, element) {
+
+		if(index != ignored) {
+			$(element).css('color', 'red');
+		};
+	});
+});
+
+  
+/*$(function(){
 	var span = $("span");
 	span.each(function(index, element){
 		if(index % 2 == 0) {
@@ -8,6 +22,7 @@ $(function(){
 	});
 });
 
+*/
 $(function(){
 	var paragraphs = $('p');
 	paragraphs.each(function(index, element) {
@@ -23,3 +38,4 @@ $(function(){
 		alert($(this).attr("data-tmp"));
     });
 });
+
